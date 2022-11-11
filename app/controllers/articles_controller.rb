@@ -31,7 +31,7 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     @article.update(article_params)
-    @article.save
+    # @article.save
     render json: @article
   end
 
@@ -43,7 +43,7 @@ class ArticlesController < ApplicationController
     private
 
     def article_params
-      params.require(:article).permit(:title, :description)
+      params.require(:article).permit(:title, :description, :user_id)
     end
 
 end
