@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
         render json:@articles
     end
     def create
-        @article=Article.new(params.require(:article).permit(:title,:discription))
+        @article=Article.new(params.require(:article).permit(:title,:discription,:user_id))
         @article.save
         redirect_to @article
     end
@@ -17,8 +17,8 @@ class ArticlesController < ApplicationController
         @article.destroy
     end
     def update
-        @article=Article.find(parmas[:id])
-        @article.update(params.require(:article).permit(:title,:discreption))
+        @article=Article.find(params[:id])
+        @article.update(params.require(:article).permit(:title,:discreption,:user_id))
         @article.save
         redirect_to @article
     end
