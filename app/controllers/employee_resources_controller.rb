@@ -1,6 +1,11 @@
 class EmployeeResourcesController < ApplicationController
 
 
+  def  index
+    @employee_resource = EmployeeResource.all
+    render json:  @employee_resource
+  end
+
   def create
     @employee_resource = EmployeeResource.new(employee_resource_params)
     @employee_resource.save

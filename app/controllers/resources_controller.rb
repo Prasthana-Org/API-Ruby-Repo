@@ -2,7 +2,7 @@ class ResourcesController < ApplicationController
 
    def index
     @resources = Resource.all
-    render json:@resources,each_serailizer: ResourceSerializer
+    render json:@resources
    end
 
   def create
