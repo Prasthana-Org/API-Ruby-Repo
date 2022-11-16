@@ -4,7 +4,7 @@ lock "~> 3.17.1"
 set :application, "dbapp"
 set :repo_url, "https://github.com/Prasthana-Org/API-Ruby-Repo.git"
 
-# Default branch is :Inventory
+Default branch is :Inventory
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
